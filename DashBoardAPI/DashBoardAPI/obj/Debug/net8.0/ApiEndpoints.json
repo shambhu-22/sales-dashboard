@@ -1,0 +1,72 @@
+[
+  {
+    "ContainingType": "DashBoardAPI.Controllers.SalesController",
+    "Method": "GetSalesData",
+    "RelativePath": "api/Sales/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DashBoardAPI.Controllers.SalesController",
+    "Method": "GetLeastRankModelsSalesDataResults",
+    "RelativePath": "api/Sales/GetLeastRankModelsSalesDataResults",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DashBoardAPI.Controllers.SalesController",
+    "Method": "GetSalesDataOfEachProductAcrossAllCitiesList",
+    "RelativePath": "api/Sales/GetSalesDataOfEachProductAcrossAllCitiesList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DashBoardAPI.Controllers.SalesController",
+    "Method": "GetTopRankModelsSalesDataResult",
+    "RelativePath": "api/Sales/GetTopRankModelsSalesDataResult",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DashBoardAPI.Controllers.SalesController",
+    "Method": "GetTotalWeekSalesAcrossAllModelsAndCities",
+    "RelativePath": "api/Sales/GetTotalWeekSalesAcrossAllModelsAndCities",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DashBoardAPI.Controllers.SalesController",
+    "Method": "GetWeekLeastSoldModelWithAmountAcrossCities",
+    "RelativePath": "api/Sales/GetWeekLeastSoldModelWithAmountAcrossCities",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DashBoardAPI.Controllers.SalesController",
+    "Method": "GetWeekTopSoldModelWithAmountAcrossCities",
+    "RelativePath": "api/Sales/GetWeekTopSoldModelWithAmountAcrossCities",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

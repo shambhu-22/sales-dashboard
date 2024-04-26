@@ -1,0 +1,6 @@
+@DashBoardAPI_HostAddress = http://localhost:5004
+
+GET {{DashBoardAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

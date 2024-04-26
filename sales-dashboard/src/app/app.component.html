@@ -1,0 +1,118 @@
+<header>
+  <nav class="navbar bg-dark border-bottom border-body text-light" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Sales Dashboard</a>
+    </div>
+  </nav>
+</header>
+<main>
+  <div class="container mt-2">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="card glassy-card" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="loadData(1)">
+          <div class="card-body">
+            <p class="card-text">Last 1-week's top-sold mobile model across all cities with the total sales 
+              amount</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card glassy-card" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="loadData(2)">
+          <div class="card-body">
+            <p class="card-text">Last 1-week's top-sold model city-wise with the total sales amount</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card glassy-card" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="loadData(3)">
+          <div class="card-body">
+            <p class="card-text">Last 1-week's least sold model across all cities with the total sales 
+              amount
+              </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card glassy-card" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="loadData(4)">
+          <div class="card-body">
+            <p class="card-text">Last 1- week's total sales amount across all models and all cities</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card glassy-card" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="loadData(5)">
+          <div class="card-body">
+            <p class="card-text">A grouped bar chart to understand the total sales of each 
+              product across all cities which provides details about the last 1 week.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Modal -->
+<div class="modal fade" #modal1 data-bs-backdrop="static" data-bs-keyboard="false" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Result</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div *ngIf="showTopModelWithAmount">
+          <p>Top Product: {{topModelWithAmount.Product}}</p>
+          <p>Total Sales: {{topModelWithAmount.Week_Total}}</p>
+        </div>
+
+        <div *ngIf="showTopModelCityWise">
+          <p *ngIf="topProductDataPerCity.length<1">Loading...</p>
+          <table *ngIf="topProductDataPerCity.length" class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Top Product</th>
+                <th scope="col">City</th>
+                <th scope="col">Sales</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of topProductDataPerCity; index as i">
+                <th scope="row">{{i+1}}</th>
+                <td>{{item.product}}</td>
+                <td>{{item.city}}</td>
+                <td>{{item.week_Total}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div *ngIf="showLeastModelWithAmount">
+          <p>Least sold Product: {{leastModelWithAmount.Product}}</p>
+          <p>Total Sales: {{leastModelWithAmount.Week_Total}}</p>
+        </div>
+
+        <div *ngIf="showTotalSales">
+          <p>Week's total sales: {{totalWeekSales}}</p>
+        </div>
+
+        <div *ngIf="showBarChartData">
+          <p *ngFor="let item of allModelsWithAmountData">{{item.Product}} -  {{item.Week_Total}}</p>
+          <app-bar-chart></app-bar-chart>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="onModalClose()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+</main>
+<footer class="footer bg-dark text-white py-4 fixed-bottom">
+  <div class="container text-center">
+      <span>&copy; 2024 SalesDashboard. All rights reserved.</span>
+  </div>
+</footer>

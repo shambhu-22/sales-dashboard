@@ -1,0 +1,18 @@
+.glassy-card {
+    background-color:  rgb(244 205 55 / 84%);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 10px;
+    margin: 2%;
+    cursor: pointer;
+  }
+
+.glassy-card:hover {
+    background-color:  rgb(241 155 55 / 84%);
+}
+
+.glassy-card.clicked {
+    transform: scale(1.15); /* Scale down the card when clicked */
+  }
